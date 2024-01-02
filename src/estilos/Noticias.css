@@ -1,0 +1,12 @@
+.contenedor-noticias {
+  display: flex;
+  justify-content: center;
+  background-color: #ffffff;
+  border: black 1px solid;
+  margin: 0% 5% 5% 5%;
+}
+
+.imagen-noticia {
+  height: 50%;
+  width: auto;
+}
