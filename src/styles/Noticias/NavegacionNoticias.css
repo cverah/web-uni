@@ -1,0 +1,8 @@
+.navegacion-noticias {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+  
+    padding-bottom: 18px;
+  }
