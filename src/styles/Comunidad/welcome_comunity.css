@@ -1,0 +1,105 @@
+.container_welcome {
+  padding: 60px 40px;
+}
+
+.welcome {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.welcome h4 {
+  width: fit-content;
+  text-align: center;
+  border: 1px solid black;
+  border-radius: 16px;
+  padding: 15px 30px;
+  font-weight: 400;
+  font-size: 20px;
+  margin: 0;
+}
+
+.nosotros {
+  margin: 40px 0 0 0;
+  width: fit-content;
+  text-align: center;
+  font-weight: 700;
+  font-size: 50px;
+  font-style: italic;
+}
+
+.nosotros p {
+  font-weight: 100;
+  font-style: italic;
+  font-size: 20px;
+}
+
+.welcome_mediasocial {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-around; /* Asegura que los elementos se distribuyan de manera uniforme */
+}
+
+.card_mediasocial {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  flex-grow: 1; /* Hace que las tarjetas crezcan para ocupar el espacio disponible */
+  /* Asegura que las tarjetas no crezcan más de lo necesario, ajusta según tus necesidades */
+}
+
+.card_mediasocial img {
+  display: block;
+  margin: 0;
+  width: 60px;
+  height: 60px;
+}
+
+.car_mediasocial .information {
+  display: flex;
+  flex-direction: column;
+}
+
+.information p {
+  margin: 0;
+  font-weight: 600;
+  font-style: italic;
+}
+
+.welcome_links {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-around;
+}
+
+.links_menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  flex-grow: 1; /* Hace que las tarjetas crezcan para ocupar el espacio disponible */
+  /* Asegura que las tarjetas no crezcan más de lo necesario, ajusta según tus necesidades */
+}
+
+.links_menu a {
+  color: black;
+  font-size: 20px;
+  font-weight: 700;
+  padding: 5px 10px;
+  border: 1px solid black;
+  border-radius: 8px;
+  text-decoration: none;
+}
+
+.links_menu a:hover {
+  color: white;
+  background-color: black;
+}
