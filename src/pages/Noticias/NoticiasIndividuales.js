@@ -1,102 +1,82 @@
 import { useParams } from "react-router-dom";
-import Encabezado from "./Encabezado.js";
+import React, { useState } from "react";
+import { motion } from 'framer-motion';
+import Header from '../../components/common/Header.js';
 import Footer from '../../components/common/Footer.js';
+import Noticieros from "./Noticieros.js";
 import '../../styles/Noticias/NoticiasIndividuales.css';
 
 function NoticiasIndividuales () {
 
     const params = useParams(); 
-    
+    const [imagens, setImagens] = useState(null)
+    const [imgens, setImgens] = useState(null)
+
     return (
         <>
-            <div>
-            <Encabezado />
-            </div>
-            <div className='container'> 
+        <div>
+            <Header />
+        </div>
+        <div> 
             <div className='contenedor-pagina-noticias-individuales'> 
                 
                 <div className='contenedor-titulo-pagina'>      
-                    <h1>{params.titulos}</h1>
+                    <h1>{Noticieros[params.ids].titulo}</h1>
                 </div>
-                
                 <div className='contenedor-imagen-posts'>
-                    <section className='contenedores-izquierda'> 
-                        <img 
-                            className='imagen-noticia-grande'
-                            src={require(`./Imagenes/${params.imagenes}.jpg`)}
-                            alt='Foto de la Noticia'
-                        />
-                    </section>
-
+                    {Noticieros[params.ids].imagen.map((imgens, index) => (
+                    <div className='contenedores-izquierda' key={index} onDoubleClick={() => setImgens(imgens)}> 
+                        {
+                            <img src={imgens.imgs} alt='Foto de la Noticia' /> 
+                        }
+                    </div>
+                    ))}
                     <section className='contenedores-derecha'>
                         <section className='contenedor-posts-noticia-secundario'>
-                            <p>{params.noticias}</p>
+                            <p>{Noticieros[params.ids].noticia}</p>
                         </section> 
-                        
                         <section className='contenedor-posts-leyenda'>
-                            <p>Fecha de publicación: 01/01/2024</p>
-                            <p>Autor: Joaquin Zevallos Zeta</p>
+                            <p>Fecha: {Noticieros[params.ids].fecha}</p>
+                            <p>Autor: {Noticieros[params.ids].autor}</p>
                         </section>
                     </section>
-
                 </div>
-               
-                <div className='contenedor-imagenes-medianas'>
 
-                    <figure className='contenedor-imagenes'>
-                        <img 
-                            className='imagen-mediana-noticias'
-                            src={require(`./Imagenes/${params.imagenes1}.jpg`)}
-                            alt='Fotos de la Noticia'
-                        />
-                    </figure>
-                    
-                    <figure className='contenedor-imagenes'>
-                        <img 
-                            className='imagen-mediana-noticias'
-                            src={require(`./Imagenes/${params.imagenes2}.jpg`)}
-                            alt='Foto de la Noticia'
-                        />
-                    </figure>
+                <motion.div className='contenedor-slider'>
+                    <motion.div className='slider' drag='x' dragConstraints={{right: 0, left: -3150}}>
+                        {Noticieros[params.ids].imagenesurl.map((imagens, index) => (
+                            <motion.div className='item' key={index} onDoubleClick={() => setImagens(imagens)}>  
+                                {
+                                    <img src={imagens.imags} alt='Foto Superpuesta' />
+                                }
+                            </motion.div>
+                        ))}
+                    </motion.div>
+                </motion.div>
 
-                    <figure className='contenedor-imagenes'>
-                        <img 
-                            className='imagen-mediana-noticias'
-                            src={require(`./Imagenes/${params.imagenes3}.jpg`)}
-                            alt='Foto de la Noticia'
-                        />
-                    </figure>
+                <motion.div className='popup-media' style={{ display: imagens ? 'block' : 'none' }}>
+                    <motion.div >
+                        <span onClick={() => setImagens(null)}>&times;</span>
+                        {                               
+                            <img src={imagens?.imags} alt='Foto Superpuesta' />
+                        }   
+                    </motion.div>
+                </motion.div>
 
-                    <figure className='contenedor-imagenes'>
-                        <img 
-                            className='imagen-mediana-noticias'
-                            src={require(`./Imagenes/${params.imagenes4}.jpg`)}
-                            alt='Foto de la Noticia'
-                        />
-                    </figure>
+                <motion.div className='popup-media' style={{ display: imgens ? 'block' : 'none' }}>
+                    <motion.div >
+                        <span onClick={() => setImgens(null)}>&times;</span>
+                        {                               
+                            <img src={imgens?.imgs} alt='Foto Superpuesta' />
+                        }   
+                    </motion.div>
+                </motion.div>
 
-                    <figure className='contenedor-imagenes'>
-                        <img 
-                            className='imagen-mediana-noticias'
-                            src={require(`./Imagenes/${params.imagenes5}.jpg`)}
-                            alt='Foto de la Noticia'
-                        />
-                    </figure>
-
-                    <figure className='contenedor-imagenes'>
-                        <img 
-                            className='imagen-mediana-noticias'
-                            src={require(`./Imagenes/${params.imagenes6}.jpg`)}
-                            alt='Foto de la Noticia'
-                        />
-                </figure>           
-
-                </div>
-                </div>
             </div>
-            <div>
+        </div>
+        <div>
             <Footer />
-            </div>
+        </div>
         </>
     )
 }

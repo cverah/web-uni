@@ -1,36 +1,51 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import HeaderScript from "../../utils/headerscript";
+import React, { useState } from 'react';
+import { Link, Outlet } from 'react-router-dom';
+import Hamburguesa from '../../pages/Noticias/Imagenes/Icons/MenuHambuerguesa.svg';
+import '../../styles/Header.css';
 
-const Header = () => {
+function Header() {
 
-  return (
-    <header>
-      
-      <figure>
-        <img className="logo" src="./img/Logo1.png" alt="Logo1" />
-        <img className="logo" src="./img/logo2.png" alt="Logo2" />
-      </figure>
+    const [ valorMenu, setMenu] = useState(false)
+    const mostrarMenu = () => {
+        setMenu( !valorMenu )
+    } 
 
-      <HeaderScript />
+    return (
+        <header className='encabezado'>
+            
+            <figure className='logos-header'>
+                <img className="logo" src={require('../../pages/Noticias/Imagenes/Logo1.jpg')} alt="Logo1" />
+                <img className="logo" src={require('../../pages/Noticias/Imagenes/Logo2.jpg')} alt="Logo2" />
+            </figure>
+                    
+            <button
+              onClick={ mostrarMenu }  
+              className='encabezado-button'>
+              <img className='encabezado-svg' src={Hamburguesa} />
+            </button>
 
-      <ul> 
-        <li>
-          <Link to="/">INICIO</Link>
-        </li>
-        <li>
-          <Link to="/noticias">NOTICIAS</Link>
-        </li>
-        <li>
-          <Link to="/comunidad">COMUNIDAD</Link>
-        </li>
-        <li>
-          <Link to="/proyectos">PROYECTOS</Link>
-        </li>
-      </ul>
-    </header>
-  );
-};
+            <nav className={ `encabezado-nav ${ valorMenu ? 'isActive' : '' }` }>
+                <ul className='encabezado-ul'>
+                    <li className='encabezado-li'>
+                        <Link className='encabezado-link' to='/'>INICIO</Link>
+                    </li>
+                    <li className='encabezado-li'>
+                        <Link className='encabezado-link' to='/PaginaNoticias'>NOTICIAS</Link>
+                    </li>
+                    <li className='encabezado-li'>
+                        <Link className='encabezado-link' to='/PaginaComunidad'>COMUNIDAD</Link>
+                    </li>
+                    <li className='encabezado-li'>
+                        <Link className='encabezado-link' to='/PaginaProyectos'>PROYECTOS</Link>
+                    </li>
+                    <li className='encabezado-li'>
+                        <Link className='encabezado-link' to='/PaginaContactos'>CONTACTOS</Link>
+                    </li>
+                </ul>
+            </nav>
+            <Outlet /> 
+        </header>
+    )
+}
 
 export default Header;
-

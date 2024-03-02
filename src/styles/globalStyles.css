@@ -1,6 +1,6 @@
 /* globalStyles.css */
 
-/* Reset de estilos y configuraciones iniciales */
+/* Reset de estilos y configuraciones iniciales *
 body,
 h1,
 h2,
@@ -13,41 +13,45 @@ p {
 body {
   font-family: "Roboto", sans-serif;
   font-size: 16px;
-  color: #fff;
-  background-color: #111; /* Fondo oscuro */
+  color: #111;
+  background-color: #111; /* Fondo oscuro 
   line-height: 1.6;
+}
+
+div::-webkit-scrollbar{
+  display: none;
 }
 
 h1,
 h2,
 h3 {
-  color: #f0f0f0; /* Color de texto más claro */
+  color: #111; /* Color de texto más claro 
 }
 
-/* Enlaces */
+/* Enlaces 
 a {
-  color: #6a7cff; /* Color de enlaces */
+  color: #6a7cff; /* Color de enlaces 
   text-decoration: none;
   transition: color 0.3s ease-in-out;
 }
 
 a:hover {
-  color: #4d5eff; /* Color de enlaces al pasar el ratón */
+  color: #4d5eff; /* Color de enlaces al pasar el ratón 
 }
 
-/* Encabezados y secciones principales */
+/* Encabezados y secciones principales 
 header,
 footer,
 main {
   padding: 20px;
 }
 
-/* Header */
+/* Header 
 header {
   background-color: #111;
 }
 
-/* Footer */
+/* Footer 
 footer {
   background-color: #111;
   color: #777;
@@ -55,9 +59,9 @@ footer {
   padding: 10px 0;
 }
 
-/* Botones */
+/* Botones 
 button {
-  background-color: #6a7cff; /* Color de fondo del botón */
+  background-color: #6a7cff; /* Color de fondo del botón 
   color: #fff;
   padding: 10px 15px;
   border: none;
@@ -66,26 +70,26 @@ button {
 }
 
 button:hover {
-  background-color: #4d5eff; /* Color de fondo del botón al pasar el ratón */
+  background-color: #4d5eff; /* Color de fondo del botón al pasar el ratón 
 }
 
 /* Secciones específicas */
 
-/* Noticias */
+/* Noticias 
 .noticias-carousel,
 .noticias-grid {
-  /* Estilos específicos para las secciones de noticias */
+  /* Estilos específicos para las secciones de noticias 
 }
 
-/* Proyectos */
+/* Proyectos 
 .proyectos-lista,
 .otros-proyectos-carousel {
-  /* Estilos específicos para las secciones de proyectos */
+  /* Estilos específicos para las secciones de proyectos 
 }
 
-/* Comunidad */
+/* Comunidad 
 .equipo-directivo-carousel,
 .colaboradores-grid,
 .mentores-grid {
-  /* Estilos específicos para la sección de comunidad */
-}
+  /* Estilos específicos para la sección de comunidad 
+}*/
