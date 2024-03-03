@@ -83,7 +83,7 @@ const WelcomeComunity = () => {
           <a href="#mision">Mision</a>
         </div>
         <div className="links_menu">
-          <a href="#mision">Vision</a>
+          <a href="#vision">Vision</a>
         </div>
         <div className="links_menu">
           <a href="#mision">Areas AES UNI</a>
