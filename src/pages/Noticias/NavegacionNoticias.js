@@ -45,7 +45,7 @@ function NavegacionNoticias({
               className={`page-link ${
                 paginaNo === currentNoticias ? "active" : ""
               }`}
-              href="#"
+              to="#"
               onClick={() => paginaEspecifica(paginaNo)}
             >
               {paginaNo}
@@ -54,15 +54,15 @@ function NavegacionNoticias({
         ))}
 
         <li className="page-item">
-          <a
+          <Link
             className={`page-link ${
               currentNoticias >= numerosPagina.length ? "disabled" : ""
             }`}
-            href="#"
+            to="#"
             onClick={siguientePagina}
           >
             Siguiente
-          </a>
+          </Link>
         </li>
       </ul>
     </nav>
