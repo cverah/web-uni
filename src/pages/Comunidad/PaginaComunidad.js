@@ -4,7 +4,6 @@ import WelcomeComunity from "./WelcomeComunity";
 import "../../styles/Comunidad/comunidad.css";
 import Mision from "./Mision";
 import Vision from "./Vision";
-import ImgCohete from "./images/cohete.png";
 
 const PaginaComunidad = () => {
   return (
