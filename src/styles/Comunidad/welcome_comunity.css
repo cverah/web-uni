@@ -1,5 +1,13 @@
 .container_welcome {
-  padding: 40px 0;
+  padding: 16px 0;
+  /* height: 100vh; */
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url("../../pages/Comunidad/images/fondo_espacial.webp");
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white;
+  opacity: 1;
 }
 
 .welcome {
@@ -8,6 +16,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 40px 30px;
 }
 .welcome h4 {
   width: fit-content;
@@ -20,23 +29,23 @@
   margin: 0;
 }
 
-.nosotros {
-  margin: 40px 0 0 0;
-  width: fit-content;
+h1 {
   text-align: center;
   font-weight: 700;
   font-size: 50px;
   font-style: italic;
+  padding: 4px 48px;
 }
 
 .nosotros p {
-  font-weight: 100;
+  font-weight: 400;
   font-style: italic;
   font-size: 20px;
+  text-align: justify;
 }
 
 .welcome_mediasocial {
-  margin-top: 30px;
+  margin: 40px 0;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -47,10 +56,9 @@
 .card_mediasocial {
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 8px;
-  flex-grow: 1; /* Hace que las tarjetas crezcan para ocupar el espacio disponible */
-  /* Asegura que las tarjetas no crezcan más de lo necesario, ajusta según tus necesidades */
+  justify-content: space-between;
+  gap: 6px;
+  padding: 8px;
 }
 
 .card_mediasocial img {
@@ -65,6 +73,22 @@
   flex-direction: column;
 }
 
+.link_mediasocial {
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 8px;
+  cursor: pointer;
+  text-decoration: none;
+  color: white;
+  transition: transform 0.3s ease;
+}
+.link_mediasocial:hover {
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 8px;
+  color: black;
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
+}
+
 .information p {
   margin: 0;
   font-weight: 600;
@@ -72,7 +96,7 @@
 }
 
 .welcome_links {
-  margin-top: 40px;
+  margin: 30px 0;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -90,16 +114,16 @@
 }
 
 .links_menu a {
-  color: black;
+  color: white;
   font-size: 20px;
   font-weight: 700;
   padding: 5px 10px;
-  border: 1px solid black;
+  border: 1px solid white;
   border-radius: 8px;
   text-decoration: none;
 }
 
 .links_menu a:hover {
-  color: white;
-  background-color: black;
+  color: black;
+  background-color: white;
 }
