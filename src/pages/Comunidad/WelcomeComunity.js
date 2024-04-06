@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "../../styles/Comunidad/welcome_comunity.css";
 import IconFacebook from "./icons/MdiFacebookBox.svg";
 import IconInstagram from "./icons/PhInstagramLogo.svg";
@@ -10,118 +10,143 @@ import IconDiscord from "./icons/BiDiscord.svg";
 import { Link } from "react-router-dom";
 
 const WelcomeComunity = () => {
+  const [isOpen, setIsOpen] = useState(false);
   return (
     <div className="container_welcome">
-      <div className="welcome">
-        <div className="nosotros">
-          <h1>Nuestra Organizacion</h1>
+      <div className="section-welcome">
+        <h1>Nuestra Organizacion</h1>
 
-          <p className="parrafo">
-            En IEE AES, nuestra pasión es encender la chispa de la curiosidad y
-            la innovación en las mentes jóvenes. Estamos comprometidos a
-            inspirar a la siguiente generación de exploradores espaciales
-            mediante programas educativos interactivos y atractivos. Nuestro
-            programa CanSat Explorers está diseñado especialmente para motivar y
-            desafiar a estudiantes de tercero, cuarto y quinto de secundaria,
-            guiándolos a través del emocionante proceso de diseñar, construir y
-            lanzar su propio picosatélite.
-          </p>
+        <p className="parrafo">
+          En IEE AES, nuestra pasión es encender la chispa de la curiosidad y la
+          innovación en las mentes jóvenes. Estamos comprometidos a inspirar a
+          la siguiente generación de exploradores espaciales mediante programas
+          educativos interactivos y atractivos. Nuestro programa CanSat
+          Explorers está diseñado especialmente para motivar y desafiar a
+          estudiantes de tercero, cuarto y quinto de secundaria, guiándolos a
+          través del emocionante proceso de diseñar, construir y lanzar su
+          propio picosatélite.
+        </p>
+      </div>
+      <div className="section-welcome">
+        <h1>Nuestras Redes Sociales</h1>
+        <div className="welcome_mediasocial">
+          <Link className="link_mediasocial" to="#">
+            <div className="card_mediasocial">
+              <img src={IconFacebook} alt="iconfacebook" />
+              <div className="information">
+                <p>48 k</p>
+                <p>Followers</p>
+              </div>
+            </div>
+          </Link>
+
+          <Link className="link_mediasocial" to="#">
+            <div className="card_mediasocial">
+              <img src={IconInstagram} alt="iconfacebook" />
+              <div className="information">
+                <p>48 k</p>
+                <p>Followers</p>
+              </div>
+            </div>
+          </Link>
+
+          <Link className="link_mediasocial" to="#">
+            <div className="card_mediasocial">
+              <img src={Iconlinkedin} alt="iconfacebook" />
+              <div className="information">
+                <p>48 k</p>
+                <p>Followers</p>
+              </div>
+            </div>
+          </Link>
+
+          <Link className="link_mediasocial" to="#">
+            <div className="card_mediasocial">
+              <img src={IconTwitter} alt="iconfacebook" />
+              <div className="information">
+                <p>48 k</p>
+                <p>Followers</p>
+              </div>
+            </div>
+          </Link>
+
+          <Link className="link_mediasocial" to="#">
+            <div className="card_mediasocial">
+              <img src={IconPerson} alt="iconfacebook" />
+              <div className="information">
+                <p>48 k</p>
+                <p>Followers</p>
+              </div>
+            </div>
+          </Link>
+
+          <Link className="link_mediasocial" to="#">
+            <div className="card_mediasocial">
+              <img src={IconTiktok} alt="iconfacebook" />
+              <div className="information">
+                <p>48 k</p>
+                <p>Followers</p>
+              </div>
+            </div>
+          </Link>
+
+          <Link className="link_mediasocial" to="#">
+            <div className="card_mediasocial">
+              <img src={IconDiscord} alt="iconfacebook" />
+              <div className="information">
+                <p>48 k</p>
+                <p>Followers</p>
+              </div>
+            </div>
+          </Link>
         </div>
       </div>
-      <h1>Nuestras Redes Sociales</h1>
-      <div className="welcome_mediasocial">
-        <Link className="link_mediasocial" to="#">
-          <div className="card_mediasocial">
-            <img src={IconFacebook} alt="iconfacebook" />
-            <div className="information">
-              <p>48 k</p>
-              <p>Followers</p>
-            </div>
+      <div className="section-welcome">
+        <h1>Conoce más de IEE AES</h1>
+        <div className="welcome_links">
+          <div className="links_menu">
+            <a href="#mision">Mision</a>
           </div>
-        </Link>
-
-        <Link className="link_mediasocial" to="#">
-          <div className="card_mediasocial">
-            <img src={IconInstagram} alt="iconfacebook" />
-            <div className="information">
-              <p>48 k</p>
-              <p>Followers</p>
-            </div>
+          <div className="links_menu">
+            <a href="#vision">Vision</a>
           </div>
-        </Link>
-
-        <Link className="link_mediasocial" to="#">
-          <div className="card_mediasocial">
-            <img src={Iconlinkedin} alt="iconfacebook" />
-            <div className="information">
-              <p>48 k</p>
-              <p>Followers</p>
-            </div>
+          <div className="links_menu">
+            <a href="#mision">Areas AES UNI</a>
           </div>
-        </Link>
-
-        <Link className="link_mediasocial" to="#">
-          <div className="card_mediasocial">
-            <img src={IconTwitter} alt="iconfacebook" />
-            <div className="information">
-              <p>48 k</p>
-              <p>Followers</p>
-            </div>
+          <div className="links_menu">
+            <a href="#mision">Nuestro Equipo Directivo</a>
           </div>
-        </Link>
-
-        <Link className="link_mediasocial" to="#">
-          <div className="card_mediasocial">
-            <img src={IconPerson} alt="iconfacebook" />
-            <div className="information">
-              <p>48 k</p>
-              <p>Followers</p>
-            </div>
+          <div className="links_menu">
+            <a href="#mision">Colaboradores</a>
           </div>
-        </Link>
-
-        <Link className="link_mediasocial" to="#">
-          <div className="card_mediasocial">
-            <img src={IconTiktok} alt="iconfacebook" />
-            <div className="information">
-              <p>48 k</p>
-              <p>Followers</p>
-            </div>
+          <div
+            className="links_menu dropdown"
+            onClick={() => setIsOpen(!isOpen)}
+          >
+            <Link to="">
+              Mentores 2024
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                class="arrow-down"
+              >
+                <path d="m12 15l-5-5h10z" />
+              </svg>
+            </Link>
+            {isOpen && (
+              <div className="dropdown-content">
+                <a href="#mentores2023">Mentores 2023</a>
+                <a href="#mentores2022">Mentores 2022</a>
+                <a href="#mentores2022">Mentores 2021</a>
+                <a href="#mentores2022">Mentores 2020</a>
+              </div>
+            )}
           </div>
-        </Link>
-
-        <Link className="link_mediasocial" to="#">
-          <div className="card_mediasocial">
-            <img src={IconDiscord} alt="iconfacebook" />
-            <div className="information">
-              <p>48 k</p>
-              <p>Followers</p>
-            </div>
+          <div className="links_menu">
+            <a href="#mision">Nuestro Boletin</a>
           </div>
-        </Link>
-      </div>
-      <h1>Conoce mas de IEE AES</h1>
-      <div className="welcome_links">
-        <div className="links_menu">
-          <a href="#mision">Mision</a>
-        </div>
-        <div className="links_menu">
-          <a href="#vision">Vision</a>
-        </div>
-        <div className="links_menu">
-          <a href="#mision">Areas AES UNI</a>
-        </div>
-        <div className="links_menu">
-          <a href="#mision">Nuestro Equipo Directivo</a>
-        </div>
-        <div className="links_menu">
-          <a href="#mision">Nuestra Subdirectiva</a>
-        </div>
-        <div className="links_menu">
-          <a href="#mision">Mentores 2023</a>
-        </div>
-        <div className="links_menu">
-          <a href="#mision">Nuestro Boletin</a>
         </div>
       </div>
     </div>
